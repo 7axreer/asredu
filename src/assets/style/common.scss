@@ -1,0 +1,63 @@
+$cText: #373435;
+$cMain: #ffcc00;
+$cWhite: #ffffff;
+$cBlack: #000000;
+$cFirst: #f9f7f3;
+$cSecond: #f3ebdf;
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Manrope";
+    font-weight: 400;
+    color: $cText;
+}
+
+.container {
+    max-width: 1220px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+textarea {
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+body {
+    background: $cWhite;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}

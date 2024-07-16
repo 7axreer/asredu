@@ -1,0 +1,9 @@
+@import "font.scss";
+@import "common.scss";
+@import "all.min.css";
+
+//! components
+
+@import "@/components/Navbar/Navbar.scss";
+@import "@/views/Home/Home.scss";
+@import "@/views/About/About.scss";

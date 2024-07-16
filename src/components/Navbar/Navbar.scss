@@ -1,0 +1,83 @@
+.nav {
+    background: $cWhite;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #cccccc;
+        padding: 15px 0;
+
+        &-logo {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            img {
+                width: 35px;
+            }
+
+            span {
+                font-weight: 700;
+                font-size: 32px;
+            }
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        &-link {
+            a {
+                font-size: 16px;
+                font-weight: 500;
+                color: $cText;
+            }
+        }
+
+        &-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            button {
+                background: transparent;
+                padding: 5px 8px;
+                border-radius: 4px;
+                background: $cSecond;
+                img {
+                    width: 25px;
+                }
+            }
+
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: $cText;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        bottom: 0px;
+                        width: 78%;
+                        height: 2px;
+                        background: $cSecond;
+                    }
+                    i {
+                        color: $cText;
+                        font-size: 18px;
+                        padding: 4px;
+                        background: $cSecond;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
