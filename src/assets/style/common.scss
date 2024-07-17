@@ -1,9 +1,9 @@
 $cText: #373435;
 $cMain: #ffcc00;
-$cWhite: #ffffff;
+$cWhite: #F5F5F5;
 $cBlack: #000000;
 $cFirst: #f9f7f3;
-$cSecond: #f3ebdf;
+$cSecond: #FF7F3E;
 
 * {
     box-sizing: border-box;
@@ -14,7 +14,9 @@ $cSecond: #f3ebdf;
     font-family: "Manrope";
     font-weight: 400;
     color: $cText;
+    scroll-behavior: smooth;
 }
+
 
 .container {
     max-width: 1220px;
@@ -57,7 +59,6 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-/* Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
 }

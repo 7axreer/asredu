@@ -10,12 +10,13 @@
 
         &-left {
             grid-column: span 3;
+            grid-row: span 1;
             background: $cSecond;
             padding: 20px 40px 20px 20px;
             border-radius: 16px;
-            height: 100%;
             position: relative;
-
+            display: flex;
+            flex-direction: column;
             h1 {
                 font-weight: 700;
                 margin: 0 0 25px;
@@ -31,16 +32,19 @@
             &-lastText {
                 font-weight: 600;
                 font-size: 20px;
-                margin-top: 125px;;
+                // margin-top: 125px;
                 text-align: right;
+                margin-top: auto;
             }
         }
 
         &-right {
+            border: 1px solid $cSecond;
             background: $cFirst;
             padding: 20px 25px;
             border-radius: 16px;
             grid-column: span 2;
+            height: 100%;
 
             h2 {
                 font-weight: 700;
@@ -90,6 +94,7 @@
                     background: $cSecond;
                     border-radius: 10px;
                     font-weight: 600;
+                    justify-self: end;
                 }
             }
         }

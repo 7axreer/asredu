@@ -1,9 +1,28 @@
 .about {
+    margin: 50px 0 50px;
     h1 {
         font-size: 36px;
         font-weight: 800;
+        margin-bottom: 50px;
     }
     &__content {
-
+        &-text {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            p {
+                text-align: center;
+                padding: 10px;
+                background: #ff7e3e41;
+                border-radius: 13px;
+                font-size: 17px;
+                &:nth-child(1) {
+                    grid-column: span 2;
+                }
+                &:nth-child(2) {
+                    grid-column: span 2;
+                }
+            }
+        }
     }
 }

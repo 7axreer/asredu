@@ -1,11 +1,15 @@
 <script setup>
-    import { defineProps } from "vue";
+    import { computed } from "vue";
+    import { useLangStore } from "@/stores/langStore";
+    import langData from "@/constants/lang";
 
-    defineProps({
-        langIcon: String,
-        changeLang: Function,
-        required: true,
-    });
+    const langStore = useLangStore();
+
+    const langIcon = computed(() => langStore.langIcon);
+
+    function changeLang() {
+        langStore.changeLang();
+    }
 </script>
 
 <template>
@@ -13,22 +17,29 @@
         <div class="container">
             <div class="nav__content">
                 <div class="nav__content-logo">
-                    <img src="@/assets/img/logo.svg" alt="" />
                     <span>ASR EDU</span>
                 </div>
 
                 <ul class="nav__content-list">
                     <li class="nav__content-link">
-                        <a href="#">Biz haqimizda</a>
+                        <a href="#about">
+                            {{ langData.about[langIcon] }}
+                        </a>
                     </li>
                     <li class="nav__content-link">
-                        <a href="#">Jamoa</a>
+                        <a href="#">
+                            {{ langData.team[langIcon] }}
+                        </a>
                     </li>
                     <li class="nav__content-link">
-                        <a href="#">Narxlar</a>
+                        <a href="#">
+                            {{ langData.price[langIcon] }}
+                        </a>
                     </li>
                     <li class="nav__content-link">
-                        <a href="#">Natijarlar</a>
+                        <a href="#">
+                            {{ langData.results[langIcon] }}
+                        </a>
                     </li>
                 </ul>
 

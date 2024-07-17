@@ -1,23 +1,18 @@
 <script setup>
-    import { ref } from "vue";
     import Navbar from "@/components/Navbar/Navbar.vue";
-    import Home from "./views/Home/Home.vue";
-    import About from "./views/About/About.vue";
+    import Home from "@/views/Home/Home.vue";
+    import About from "@/views/About/About.vue";
+    import { useLangStore } from "@/stores/langStore";
 
-    const langIcon = ref("uz");
+    const langStore = useLangStore();
+
     function changeLang() {
-        if (langIcon.value === "uz") {
-            langIcon.value = "ru";
-        } else if (langIcon.value === "ru") {
-            langIcon.value = "us";
-        } else {
-            langIcon.value = "uz";
-        }
+        langStore.changeLang();
     }
 </script>
 
 <template>
-    <Navbar :langIcon="langIcon" :changeLang="changeLang" />
+    <Navbar />
     <Home />
-    <About/>
+    <About />
 </template>
